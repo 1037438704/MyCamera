@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+/**
+ *  buildscript   意思是构建脚本  不是是太懂
+ * */
+buildscript {
+    /**
+     * repositories  意思是仓库的意思
+     * */
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
+    /**
+     * dependencies 意思是依赖关系  是android studio build:gradle 的版本
+     * */
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+/**
+ * 项目介绍  目前不知道用来干什么
+ * */
+allprojects {
+    /**
+     * 这也是一个仓库
+     * */
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
